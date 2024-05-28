@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Agrega la clase snickers como producto perteneciente a la clase dulce

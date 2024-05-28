@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 import java.util.ArrayList;
 
 /**
@@ -32,7 +32,7 @@ public class Deposito<T> {
         if(al.isEmpty()){
             return null;
         } else {
-            return al.removeFirst();
+            return al.remove(0);
         }
     }
 }

@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Esta es una clase abstracta llamada "Moneda" que contiene

@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  *  La clase comprador emula y ejecuta el proceso completo de un comprador

@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Esta es una clase representativa del producto "Cocacola" extensión de Bebida, usando override y permitiendo tener ordenado su numero de serie

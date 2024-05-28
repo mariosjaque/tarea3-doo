@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Se agrega como producto la clase Sprite perteneciente a la clase Bebida

@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Este es un código que simula un expendedor de bebidas y dulces, creado para la clase POO (Programacion Orientada a Objetos)

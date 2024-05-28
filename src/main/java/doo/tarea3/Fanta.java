@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Se agrega Fanta como un producto perteneciente a la clase Bebida

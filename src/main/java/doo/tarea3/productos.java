@@ -1,4 +1,4 @@
-package tarea1;
+package doo.tarea3;
 
 /**
  * Utillizando un enum se representa todos los productos ofrecidos
