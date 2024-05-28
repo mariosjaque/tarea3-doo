@@ -9,7 +9,9 @@ public class Expendedor extends Exception {
     private Deposito<Producto> fanta;
     private Deposito<Producto> super8;
     private Deposito<Producto> snickers;
+    private Deposito<Moneda> recaudacion;
     private Deposito<Moneda> monVu;
+    private Producto depositoSalida;
 
     /**
      * Verifica el stock de cada producto
@@ -49,6 +51,7 @@ public class Expendedor extends Exception {
             snickers.add(beo);
         }
 
+        recaudacion = new Deposito<Moneda>();
         monVu = new Deposito<Moneda>();
     }
 
@@ -60,7 +63,7 @@ public class Expendedor extends Exception {
      * @throws PagoInsuficienteExcepcion una excepcion que permite saber cuando el dinero ingresado es menos al precio del producto
      * @throws PagoIncorrectoException cuando no se pudo concretar la transaccion.
      */
-    public Producto comprarProducto(Moneda m, int prodnum) throws PagoInsuficienteExcepcion,NoHayProductoException,PagoIncorrectoException {
+    void comprarProducto(Moneda m, int prodnum) throws PagoInsuficienteExcepcion,NoHayProductoException,PagoIncorrectoException {
         if(m==null){throw new PagoIncorrectoException("Moneda invalida");}
         int pB=0;
         productos producto = null;
@@ -97,6 +100,7 @@ public class Expendedor extends Exception {
                     out = super8.get();
                     break;
             }
+            recaudacion.add(m);
         }
 
         if(m.getValor()>pB && out!=null){
@@ -112,11 +116,7 @@ public class Expendedor extends Exception {
             throw new NoHayProductoException("No hay stock de producto");
         }
 
-        if(out==null){
-            monVu.add(m);
-
-        }
-        return out;
+        depositoSalida = out;
 
 
     }
@@ -127,5 +127,9 @@ public class Expendedor extends Exception {
      */
     public Moneda getVuelto(){
         return monVu.get();
+    }
+
+    public Producto getProducto(){
+        return depositoSalida;
     }
 }

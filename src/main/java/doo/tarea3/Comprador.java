@@ -15,7 +15,8 @@ public class Comprador extends Exception{
      * @param exp le asigna el nombre exp a Expendedor
      */
     public Comprador(Moneda m, int cualProducto, Expendedor exp) throws NoHayProductoException,PagoIncorrectoException,PagoInsuficienteExcepcion{
-        Producto queCompre = exp.comprarProducto(m, cualProducto);
+        Producto queCompre = null;
+        /*exp.comprarProducto(m, cualProducto);*/
         /**
          * Cada vez que la transaccion es aprobada, el producto comprado emite un sonido
          */
