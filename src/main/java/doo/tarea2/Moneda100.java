@@ -1,4 +1,4 @@
-package doo.tarea3;
+package doo.tarea2;
 
 /**
  * Esta clase hereda la abstracta de Moneda y le otorga el valor de 100

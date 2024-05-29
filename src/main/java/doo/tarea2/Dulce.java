@@ -1,4 +1,4 @@
-package doo.tarea3;
+package doo.tarea2;
 
 /**
  * Como una extension de producto esta clase separa todos los dulces de la maquina en este lugar

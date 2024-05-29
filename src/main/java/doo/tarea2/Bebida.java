@@ -1,4 +1,4 @@
-package doo.tarea3;
+package doo.tarea2;
 
 /**
  * Esta es una clase abstracta que contiene a todas las bebidas

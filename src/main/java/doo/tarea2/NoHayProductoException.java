@@ -1,4 +1,4 @@
-package doo.tarea3;
+package doo.tarea2;
 
 /**
  * La excepcion que permite devolver un super mensaje cuando no hay stock

@@ -1,4 +1,4 @@
-package doo.tarea3;
+package doo.tarea2;
 
 /**
  * Se agrega Super8 como producto perteneciente a la clase Dulce
