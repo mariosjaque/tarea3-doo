@@ -1,4 +1,4 @@
-package doo.tarea2;
+package doo.tarea1;
 
 /**
  * La excepcion que permite devolver un super mensaje cuando el dinero ingresado es insuficiente para

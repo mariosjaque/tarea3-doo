@@ -1,4 +1,4 @@
-package doo.tarea2;
+package doo.tarea1;
 
 /**
  * Esta clase abstracta presenta el modelo para organiazar e identificar

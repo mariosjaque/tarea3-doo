@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Arreglar package en clases trasladadas y agregar README">
-      <change afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" afterDir="false" />
+    <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Separar packages">
+      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716932516000</updated>
-      <workItem from="1717004652996" duration="1892000" />
+      <workItem from="1717004652996" duration="2523000" />
     </task>
     <task id="LOCAL-00001" summary="Arreglar package en clases trasladadas y agregar README">
       <created>1716933636322</created>
@@ -101,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716933636322</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creando clase Ventana con lo indicado en CANVAS y modificando la clase Main a lo que indica enunciado">
+      <option name="closed" value="true" />
+      <created>1717006642171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717006642171</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Separar packages">
+      <option name="closed" value="true" />
+      <created>1717006908421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717006908421</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +124,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Arreglar package en clases trasladadas y agregar README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglar package en clases trasladadas y agregar README" />
+    <MESSAGE value="Creando clase Ventana con lo indicado en CANVAS y modificando la clase Main a lo que indica enunciado" />
+    <MESSAGE value="Separar packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separar packages" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package doo.tarea2;
+package doo.tarea1;
 /**
  * La excepcion que permite devolver un super mensaje cuando hubieron
  * problemas con el pago y no se pudo realizar

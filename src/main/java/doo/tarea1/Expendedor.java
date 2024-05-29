@@ -1,4 +1,4 @@
-package doo.tarea2;
+package doo.tarea1;
 
 /**
  * Crea un expendedor y define el comportamiento logico de este, incluyendo las excepciones

@@ -1,4 +1,4 @@
-package doo.tarea2;
+package doo.tarea1;
 import java.util.ArrayList;
 
 /**
