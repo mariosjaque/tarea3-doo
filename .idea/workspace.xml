@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Separar packages">
+      <change afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2h75wVwDw1aozOIfuhsFNSbvncf" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,7 +49,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mario/workspace/tarea3-doo",
+    "last_opened_file_path": "C:/Users/ignac/tarea3-doo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

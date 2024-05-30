@@ -10,7 +10,30 @@ public class Ventana extends JFrame { // como extiende a un JFrame, es un JFrame
         // auto configuración: puedes poner aquí sentencis para inicializar las propiedades nuevas y heredades de JFrame
         this.setTitle("Expendedor y comprador");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE); // permite que la X para cerrar la ventana esté habilitada para finalizar la ejecución
-        this.setSize(1000,800);
+        this.setExtendedState(this.MAXIMIZED_BOTH);
+
         this.setVisible(true);
     }
+
+    public void IniciarVotones(JPanel panel){
+        JButton boton1 = new JButton();
+        JButton boton2 = new JButton();
+        JButton boton3 = new JButton();
+        JButton boton4 = new JButton();
+        JButton boton5 = new JButton();
+        JButton boton6 = new JButton();
+        boton1.setText("1");
+        boton2.setText("2");
+        boton3.setText("3");
+        boton4.setText("4");
+        boton5.setText("5");
+        boton6.setText("6");
+
+        boton1.setBounds(100,50,100,100);
+        panel.add(boton1);
+    }
+
+
+
+
 }
