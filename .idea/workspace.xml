@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Separar packages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelComprador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelExpendedor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flecha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flechareversa.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelComprador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelComprador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/Ventana.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ignac\tarea3-doo" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="doo.tarea3.Main" />
