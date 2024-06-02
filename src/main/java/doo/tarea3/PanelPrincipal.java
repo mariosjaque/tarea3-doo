@@ -5,18 +5,24 @@ import java.awt.*;
 
 public class PanelPrincipal extends JPanel {
 
-    public JPanel PanelExpendedor;
-    public JPanel PanelComprador;
+    private PanelExpendedor PanelExpendedor;
+    private PanelComprador PanelComprador;
     public PanelPrincipal(){
         super();
-        PanelExpendedor = new JPanel();
-        PanelComprador = new JPanel();
         this.setLayout(null);
+        PanelExpendedor = new PanelExpendedor();
+        PanelComprador = new PanelComprador();
+        this.add(PanelComprador);
+        this.setBounds(0,0,690,690);
+        this.setBackground(Color.yellow);
+
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.setColor(Color.black);
+        g.drawRect(1120,90,300,300);
 
     }
 }
