@@ -15,13 +15,13 @@ public class PanelExpendedor extends JPanel {
         this.setBounds(300,0,400,699);
         this.setOpaque(false);
 
-        ImageIcon super8 = new ImageIcon("super8.png");
-        ImageIcon Snickers = new ImageIcon("Snickers.png");
-        ImageIcon Fanta = new ImageIcon("Fanta.png");
-        ImageIcon CocaCola = new ImageIcon("CocaCola.png");
-        ImageIcon Sprite = new ImageIcon("Sprite.png");
-        ImageIcon maquina = new ImageIcon("maquina_expendedora_sin_fondo.png");
-        ImageIcon flecha_arriba = new ImageIcon("flecha_arriba.png");
+        ImageIcon super8 = new ImageIcon(getClass().getResource("/super8.png"));
+        ImageIcon Snickers = new ImageIcon(getClass().getResource("/Snickers.png"));
+        ImageIcon Fanta = new ImageIcon(getClass().getResource("/Fanta.png"));
+        ImageIcon CocaCola = new ImageIcon(getClass().getResource("/CocaCola.png"));
+        ImageIcon Sprite = new ImageIcon(getClass().getResource("/Sprite.png"));
+        ImageIcon maquina = new ImageIcon(getClass().getResource("/maquina_expendedora_sin_fondo.png"));
+        ImageIcon flecha_arriba = new ImageIcon(getClass().getResource("/flecha_arriba.png"));
 
 
         JLabel producto1 = new JLabel();
@@ -61,7 +61,7 @@ public class PanelExpendedor extends JPanel {
 
         //Creacion teclado
 
-        ImageIcon flecha = new ImageIcon("flechareversa.png");
+        ImageIcon flecha = new ImageIcon(getClass().getResource("/flechareversa.png"));
         JLabel borrar = new JLabel();
         borrar.setIcon(new ImageIcon(flecha.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
         JButton boton1 = new JButton();

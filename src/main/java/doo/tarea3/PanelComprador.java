@@ -18,7 +18,7 @@ public class PanelComprador extends JPanel {
         this.setBounds(0,0,200,700);
 
 
-        ImageIcon bolsa = new ImageIcon("bolsa_de_dinero.png");
+        ImageIcon bolsa = new ImageIcon(getClass().getResource("/bolsa_de_dinero.png"));
         JLabel imagen = new JLabel();
         imagen.setIcon(new ImageIcon(bolsa.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
         imagen.setBounds(30,30,100,100);

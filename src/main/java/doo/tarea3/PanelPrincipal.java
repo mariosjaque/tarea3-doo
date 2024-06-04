@@ -14,7 +14,7 @@ public class PanelPrincipal extends JPanel {
     public PanelPrincipal(){
         super();
         this.setLayout(null);
-        ImageIcon pared = new ImageIcon("pared.png");
+        ImageIcon pared = new ImageIcon(getClass().getResource("/pared.png"));
         JLabel Pared = new JLabel();
         Pared.setIcon(new ImageIcon(pared.getImage().getScaledInstance(690,690,Image.SCALE_SMOOTH)));
         PanelExpendedor = new PanelExpendedor();
