@@ -1,5 +1,7 @@
 package doo.tarea3;
 
+import doo.tarea1.NoHayProductoException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +13,7 @@ public class PanelPrincipal extends JPanel {
 
     private PanelExpendedor PanelExpendedor;
     private PanelComprador PanelComprador;
-    public PanelPrincipal(){
+    public PanelPrincipal() throws NoHayProductoException {
         super();
         this.setLayout(null);
         ImageIcon pared = new ImageIcon(getClass().getResource("/pared.png"));

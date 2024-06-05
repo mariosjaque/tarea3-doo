@@ -4,13 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
+
 
 import doo.tarea1.*;
 
 public class PanelExpendedor extends JPanel {
+    private Expendedor Expendedor;
 
-    public PanelExpendedor(){
+    public PanelExpendedor() throws NoHayProductoException {
         super();
+        Expendedor = new Expendedor(5);
+
         this.setLayout(null);
         this.setBounds(300,0,400,699);
         this.setOpaque(false);
@@ -70,8 +76,9 @@ public class PanelExpendedor extends JPanel {
         JButton boton4 = new JButton();
         JButton boton5 = new JButton();
         JButton boton6 = new JButton();
-        JButton boton7 = new JButton();
-        JButton boton8 = new JButton();
+        JButton circulo = new JButton();
+        JButton boton_borrar = new JButton();
+        JButton vuelto = new JButton();
         //JLabel texto2 = new JLabel("1");
         //texto2.setBounds(0,0,10,10);
         //this.add(texto2);
@@ -88,8 +95,9 @@ public class PanelExpendedor extends JPanel {
         boton4.setBounds(10,140,50,50);
         boton5.setBounds(100,140,50,50);
         boton6.setBounds(190,140,50,50);
-        boton7.setBounds(280,50,50,50);
-        boton8.setBounds(280,140,50,50);
+        circulo.setBounds(280,50,50,50);
+        boton_borrar.setBounds(280,140,50,50);
+        vuelto.setBounds(110,550,120,50);
         borrar.setBounds(280,140,50,50);
 
 
@@ -99,21 +107,26 @@ public class PanelExpendedor extends JPanel {
         this.add(boton4);
         this.add(boton5);
         this.add(boton6);
-        this.add(boton7);
-        this.add(boton8);
+        this.add(circulo);
+        this.add(boton_borrar);
+        this.add(vuelto);
         this.add(borrar);
 
 
 
-        boton7.setFocusPainted(false);
-        boton7.setBorderPainted(false);
-        boton7.setContentAreaFilled(false);
+        circulo.setFocusPainted(false);
+        circulo.setBorderPainted(false);
+        circulo.setContentAreaFilled(false);
 
 
 
-        boton8.setContentAreaFilled(false);
-        boton8.setBorderPainted(false);
-        boton8.setContentAreaFilled(false);
+        boton_borrar.setContentAreaFilled(false);
+        boton_borrar.setBorderPainted(false);
+        boton_borrar.setContentAreaFilled(false);
+
+        vuelto.setContentAreaFilled(false);
+        vuelto.setBorderPainted(false);
+        vuelto.setContentAreaFilled(false);
 
         JTextField texto = new JTextField();
         texto.setBounds(80,15,100,30);
@@ -154,10 +167,27 @@ public class PanelExpendedor extends JPanel {
                 texto.setText(texto.getText() + "6");
             }
         };
+        ActionListener oyente7 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int serie;
+                serie = Integer.parseInt(texto.getText());
+                
+                texto.setText("");
+
+            }
+        };
         ActionListener oyente8 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 texto.setText("");
+            }
+        };
+        ActionListener oyente9 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         };
         boton1.addActionListener(oyente1);
@@ -166,7 +196,8 @@ public class PanelExpendedor extends JPanel {
         boton4.addActionListener(oyente4);
         boton5.addActionListener(oyente5);
         boton6.addActionListener(oyente6);
-        boton8.addActionListener(oyente8);
+        circulo.addActionListener(oyente7);
+        boton_borrar.addActionListener(oyente8);
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -176,6 +207,7 @@ public class PanelExpendedor extends JPanel {
         g.fillRect(0,0,400,200);
         g.setColor(Color.green);
         g.fillArc(280,50,50,50,0,360);
+
     }
 
 }

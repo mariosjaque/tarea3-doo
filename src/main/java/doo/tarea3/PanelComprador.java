@@ -1,5 +1,6 @@
 package doo.tarea3;
 
+import doo.tarea1.Moneda;
 import doo.tarea1.Moneda100;
 import doo.tarea1.Moneda1000;
 import doo.tarea1.Moneda500;
@@ -11,25 +12,32 @@ import java.awt.event.ActionListener;
 
 
 public class PanelComprador extends JPanel {
-    int cantidad =1000;
+    private Moneda moneda = null;
     public PanelComprador(){
         super();
         this.setLayout(null);
         this.setBounds(0,0,200,700);
+        JButton moneda500 = new JButton();
+        moneda500.setBounds(0,0,50,50);
 
+        ActionListener oyente = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                moneda = new Moneda500();
+            }
+        };
+        moneda500.addActionListener(oyente);
 
-        ImageIcon bolsa = new ImageIcon(getClass().getResource("/bolsa_de_dinero.png"));
-        JLabel imagen = new JLabel();
-        imagen.setIcon(new ImageIcon(bolsa.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
-        imagen.setBounds(30,30,100,100);
-
-        JLabel dinero = new JLabel(String.valueOf(1000));
-        dinero.setBounds(30,20,40,10);
-        this.add(imagen);
-        this.add(dinero);
+        this.add(moneda500);
         this.setBackground(Color.gray);
 
+    }
 
+    public Moneda getmoneda(){
+        Moneda m;
+        m = moneda;
+        moneda = null;
+        return m;
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
