@@ -11,11 +11,11 @@ import java.awt.image.ImageProducer;
 import doo.tarea1.*;
 
 public class PanelExpendedor extends JPanel {
-    private Expendedor Expendedor;
 
-    public PanelExpendedor(Expendedor Expendedor) throws NoHayProductoException {
+
+    public PanelExpendedor() throws NoHayProductoException {
         super();
-        Expendedor = Expendedor;
+
 
         this.setLayout(null);
         this.setBounds(300,0,400,699);

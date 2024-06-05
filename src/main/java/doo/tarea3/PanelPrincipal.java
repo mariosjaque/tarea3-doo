@@ -21,7 +21,7 @@ public class PanelPrincipal extends JPanel {
         JLabel Pared = new JLabel();
         Pared.setIcon(new ImageIcon(pared.getImage().getScaledInstance(690,690,Image.SCALE_SMOOTH)));
         Expendedor Expendedor = new Expendedor(5);
-        PanelExpendedor = new PanelExpendedor(Expendedor);
+        PanelExpendedor = new PanelExpendedor();
         PanelComprador = new PanelComprador(Expendedor);
         PanelExpendedor.setBackground(Color.blue);
         Pared.setBounds(0,0,690,690);

@@ -12,6 +12,7 @@ public class PanelComprador extends JPanel{
     private Moneda moneda = null;
     private Comprador comprador;
     private Expendedor expendedor;
+    private int verificador;
     public PanelComprador(Expendedor exp){
         super();
         expendedor = exp;
@@ -31,6 +32,8 @@ public class PanelComprador extends JPanel{
         this.add(moneda500);
         this.setOpaque(false);
 
+        JLabel Alerta;
+
         //Creacion teclado
 
         ImageIcon flecha = new ImageIcon(getClass().getResource("/flechareversa.png"));
@@ -45,9 +48,6 @@ public class PanelComprador extends JPanel{
         JButton circulo = new JButton();
         JButton boton_borrar = new JButton();
         JButton vuelto = new JButton();
-        //JLabel texto2 = new JLabel("1");
-        //texto2.setBounds(0,0,10,10);
-        //this.add(texto2);
         boton1.setText("1");
         boton2.setText("2");
         boton3.setText("3");
@@ -145,6 +145,8 @@ public class PanelComprador extends JPanel{
                     JOptionPane.showMessageDialog(null, ex);
                 }
                 texto.setText("");
+                expendedor.getMoneda(moneda);
+                moneda = null;
 
             }
         };
@@ -157,6 +159,14 @@ public class PanelComprador extends JPanel{
         ActionListener oyente9 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(verificador == 0){
+                    JOptionPane.showMessageDialog(null,"Usted a comprado una "+expendedor.getProducto().Sonido());
+                    verificador +=1;
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"No hay nada");
+                }
+
 
             }
         };
@@ -168,15 +178,10 @@ public class PanelComprador extends JPanel{
         boton6.addActionListener(oyente6);
         circulo.addActionListener(oyente7);
         boton_borrar.addActionListener(oyente8);
+        vuelto.addActionListener(oyente9);
 
     }
 
-    public Moneda getmoneda(){
-        Moneda m;
-        m = moneda;
-        moneda = null;
-        return m;
-    }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 

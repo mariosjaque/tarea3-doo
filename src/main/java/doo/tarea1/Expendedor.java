@@ -12,7 +12,6 @@ public class Expendedor extends Exception {
     private Deposito<Moneda> recaudacion;
     private Deposito<Moneda> monVu;
     private Producto depositoSalida;
-    private Moneda moneda;
 
     /**
      * Verifica el stock de cada producto
@@ -134,12 +133,8 @@ public class Expendedor extends Exception {
         return depositoSalida;
     }
 
-    public Moneda  setMoneda(Moneda m){
-        return moneda = m;
-    }
-    public Moneda getMoneda(){
-        Moneda m = moneda;
-        moneda = null;
-        return m;
+
+    public void getMoneda(Moneda moneda){
+        recaudacion.add(moneda);
     }
 }
