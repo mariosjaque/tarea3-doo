@@ -1,5 +1,7 @@
 package doo.tarea1;
 
+import java.awt.*;
+
 /**
  * Crea un expendedor y define el comportamiento logico de este, incluyendo las excepciones
  */
@@ -131,7 +133,9 @@ public class Expendedor extends Exception {
     }
 
     public Producto getProducto(){
-        return depositoSalida;
+        Producto prod = depositoSalida;
+        depositoSalida = null;
+        return prod;
     }
 
     public Moneda setMoneda(Moneda m){
@@ -142,4 +146,5 @@ public class Expendedor extends Exception {
         moneda = null;
         return m;
     }
+
 }

@@ -12,7 +12,7 @@ public class PanelComprador extends JPanel{
     private Moneda moneda = null;
     private Comprador comprador;
     private Expendedor expendedor;
-    private int verificador;
+
     public PanelComprador(Expendedor exp){
         super();
         expendedor = exp;
@@ -158,12 +158,12 @@ public class PanelComprador extends JPanel{
         ActionListener oyente9 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(verificador == 0){
-                    JOptionPane.showMessageDialog(null,"Usted a comprado una "+expendedor.getProducto().Sonido());
-                    verificador +=1;
+                Producto queCompre = expendedor.getProducto();
+                if(queCompre==null){
+                    JOptionPane.showMessageDialog(null,"No hay nada");
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"No hay nada");
+                    JOptionPane.showMessageDialog(null,"Usted ha comprado "+queCompre.Sonido());
                 }
 
 
