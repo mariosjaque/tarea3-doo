@@ -97,37 +97,37 @@ public class PanelComprador extends JPanel{
         ActionListener oyente1 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "1");
+                texto.setText("1");
             }
         };
         ActionListener oyente2 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "2");
+                texto.setText("2");
             }
         };
         ActionListener oyente3 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "3");
+                texto.setText("3");
             }
         };
         ActionListener oyente4 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "4");
+                texto.setText("4");
             }
         };
         ActionListener oyente5 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "5");
+                texto.setText("5");
             }
         };
         ActionListener oyente6 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                texto.setText(texto.getText() + "6");
+                texto.setText("6");
             }
         };
         ActionListener oyente7 = new ActionListener() {
