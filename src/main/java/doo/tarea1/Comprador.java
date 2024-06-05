@@ -16,7 +16,7 @@ public class Comprador extends Exception{
      */
     public Comprador(Moneda m, int cualProducto, Expendedor exp) throws NoHayProductoException,PagoIncorrectoException,PagoInsuficienteExcepcion{
         Producto queCompre = null;
-        /*exp.comprarProducto(m, cualProducto);*/
+        exp.comprarProducto(m, cualProducto);
         /**
          * Cada vez que la transaccion es aprobada, el producto comprado emite un sonido
          */

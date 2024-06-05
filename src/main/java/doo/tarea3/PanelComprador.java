@@ -10,8 +10,11 @@ import java.awt.event.ActionListener;
 
 public class PanelComprador extends JPanel{
     private Moneda moneda = null;
+    private Comprador comprador;
+    private Expendedor expendedor;
     public PanelComprador(Expendedor exp){
         super();
+        expendedor = exp;
         this.setLayout(null);
         this.setBounds(0,0,700,700);
         JButton moneda500 = new JButton();
@@ -134,9 +137,13 @@ public class PanelComprador extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                int serie;
-                serie = Integer.parseInt(texto.getText());
-
+                int prod;
+                prod = Integer.parseInt(texto.getText());
+                try {
+                    comprador = new Comprador(moneda,prod,expendedor);
+                } catch (NoHayProductoException | PagoInsuficienteExcepcion | PagoIncorrectoException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
+                }
                 texto.setText("");
 
             }
