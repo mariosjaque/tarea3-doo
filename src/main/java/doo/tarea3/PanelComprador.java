@@ -19,17 +19,16 @@ public class PanelComprador extends JPanel{
         this.setLayout(null);
         this.setBounds(0,0,700,700);
         JButton moneda500 = new JButton();
-        moneda500.setBounds(0,0,50,50);
+        JButton moneda100 = new JButton();
+        JButton billete1000 = new JButton();
+        moneda500.setBounds(0,0,100,100);
+        moneda100.setBounds(0,200,100,100);
+        billete1000.setBounds(0,400,200,100);
 
-        ActionListener oyente = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                moneda = new Moneda500();
-            }
-        };
-        moneda500.addActionListener(oyente);
 
         this.add(moneda500);
+        this.add(moneda100);
+        this.add(billete1000);
         this.setOpaque(false);
 
         JLabel Alerta;
@@ -37,8 +36,18 @@ public class PanelComprador extends JPanel{
         //Creacion teclado
 
         ImageIcon flecha = new ImageIcon(getClass().getResource("/flechareversa.png"));
+        ImageIcon Imoneda100 = new ImageIcon(getClass().getResource("/moneda_100.png"));
+        ImageIcon Imoneda500 = new ImageIcon(getClass().getResource("/moneda_500.png"));
+        ImageIcon Ibillete1000 = new ImageIcon(getClass().getResource("/billete1000.png"));
         JLabel borrar = new JLabel();
+        JLabel Jmoneda100 = new JLabel();
+        JLabel Jmoneda500 = new JLabel();
+        JLabel Jbillete1000 = new JLabel();
         borrar.setIcon(new ImageIcon(flecha.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
+        Jmoneda100.setIcon(new ImageIcon(Imoneda100.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH)));
+        Jmoneda500.setIcon(new ImageIcon(Imoneda500.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH)));
+        Jbillete1000.setIcon(new ImageIcon(Ibillete1000.getImage().getScaledInstance(200,100,Image.SCALE_SMOOTH)));
+
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
         JButton boton3 = new JButton();
@@ -65,6 +74,9 @@ public class PanelComprador extends JPanel{
         boton_borrar.setBounds(580,140,50,50);
         vuelto.setBounds(410,550,120,50);
         borrar.setBounds(580,140,50,50);
+        Jmoneda100.setBounds(0,0,100,100);
+        Jmoneda500.setBounds(0,200,100,100);
+        Jbillete1000.setBounds(0,400,200,100);
 
 
         this.add(boton1);
@@ -77,6 +89,9 @@ public class PanelComprador extends JPanel{
         this.add(boton_borrar);
         this.add(vuelto);
         this.add(borrar);
+        this.add(Jmoneda100);
+        this.add(Jbillete1000);
+        this.add(Jmoneda500);
 
 
 
@@ -93,6 +108,18 @@ public class PanelComprador extends JPanel{
         vuelto.setContentAreaFilled(false);
         vuelto.setBorderPainted(false);
         vuelto.setContentAreaFilled(false);
+
+        moneda100.setFocusPainted(false);
+        moneda100.setBorderPainted(false);
+        moneda100.setContentAreaFilled(false);
+
+        moneda500.setFocusPainted(false);
+        moneda500.setBorderPainted(false);
+        moneda500.setContentAreaFilled(false);
+
+        billete1000.setFocusPainted(false);
+        billete1000.setBorderPainted(false);
+        billete1000.setContentAreaFilled(false);
 
         JTextField texto = new JTextField();
         texto.setBounds(380,15,100,30);
@@ -169,6 +196,24 @@ public class PanelComprador extends JPanel{
 
             }
         };
+        ActionListener oyente10 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                moneda = new Moneda100();
+            }
+        };
+        ActionListener oyente11 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                moneda = new Moneda500();
+            }
+        };
+        ActionListener oyente12 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                moneda = new Billete1000();
+            }
+        };
         boton1.addActionListener(oyente1);
         boton2.addActionListener(oyente2);
         boton3.addActionListener(oyente3);
@@ -178,6 +223,9 @@ public class PanelComprador extends JPanel{
         circulo.addActionListener(oyente7);
         boton_borrar.addActionListener(oyente8);
         vuelto.addActionListener(oyente9);
+        moneda100.addActionListener(oyente10);
+        moneda500.addActionListener(oyente11);
+        billete1000.addActionListener(oyente12);
 
     }
 

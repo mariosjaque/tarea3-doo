@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Separar packages" />
+    <list default="true" id="3f90a839-266e-49a6-bbe3-4eb8d491d1e0" name="Changes" comment="Separar packages">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/billete1000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/moneda_100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/moneda_500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea1/Moneda1000.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea1/Billete1000.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelComprador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/doo/tarea3/PanelComprador.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +65,7 @@
       <recent name="C:\Users\ignac\tarea3-doo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ignac\tarea3-doo\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="C:\Users\ignac\tarea3-doo" />
     </key>
