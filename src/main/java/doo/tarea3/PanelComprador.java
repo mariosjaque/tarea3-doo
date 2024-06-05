@@ -145,7 +145,6 @@ public class PanelComprador extends JPanel{
                     JOptionPane.showMessageDialog(null, ex);
                 }
                 texto.setText("");
-                expendedor.getMoneda(moneda);
                 moneda = null;
 
             }
