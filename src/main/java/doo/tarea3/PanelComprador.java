@@ -1,9 +1,6 @@
 package doo.tarea3;
 
-import doo.tarea1.Moneda;
-import doo.tarea1.Moneda100;
-import doo.tarea1.Moneda1000;
-import doo.tarea1.Moneda500;
+import doo.tarea1.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,12 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class PanelComprador extends JPanel {
+public class PanelComprador extends JPanel{
     private Moneda moneda = null;
-    public PanelComprador(){
+    public PanelComprador(Expendedor exp){
         super();
         this.setLayout(null);
-        this.setBounds(0,0,200,700);
+        this.setBounds(0,0,700,700);
         JButton moneda500 = new JButton();
         moneda500.setBounds(0,0,50,50);
 
@@ -29,7 +26,141 @@ public class PanelComprador extends JPanel {
         moneda500.addActionListener(oyente);
 
         this.add(moneda500);
-        this.setBackground(Color.gray);
+        this.setOpaque(false);
+
+        //Creacion teclado
+
+        ImageIcon flecha = new ImageIcon(getClass().getResource("/flechareversa.png"));
+        JLabel borrar = new JLabel();
+        borrar.setIcon(new ImageIcon(flecha.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
+        JButton boton1 = new JButton();
+        JButton boton2 = new JButton();
+        JButton boton3 = new JButton();
+        JButton boton4 = new JButton();
+        JButton boton5 = new JButton();
+        JButton boton6 = new JButton();
+        JButton circulo = new JButton();
+        JButton boton_borrar = new JButton();
+        JButton vuelto = new JButton();
+        //JLabel texto2 = new JLabel("1");
+        //texto2.setBounds(0,0,10,10);
+        //this.add(texto2);
+        boton1.setText("1");
+        boton2.setText("2");
+        boton3.setText("3");
+        boton4.setText("4");
+        boton5.setText("5");
+        boton6.setText("6");
+
+        boton1.setBounds(310,50,50,50);
+        boton2.setBounds(400,50,50,50);
+        boton3.setBounds(490,50,50,50);
+        boton4.setBounds(310,140,50,50);
+        boton5.setBounds(400,140,50,50);
+        boton6.setBounds(490,140,50,50);
+        circulo.setBounds(580,50,50,50);
+        boton_borrar.setBounds(580,140,50,50);
+        vuelto.setBounds(410,550,120,50);
+        borrar.setBounds(580,140,50,50);
+
+
+        this.add(boton1);
+        this.add(boton2);
+        this.add(boton3);
+        this.add(boton4);
+        this.add(boton5);
+        this.add(boton6);
+        this.add(circulo);
+        this.add(boton_borrar);
+        this.add(vuelto);
+        this.add(borrar);
+
+
+
+        circulo.setFocusPainted(false);
+        circulo.setBorderPainted(false);
+        circulo.setContentAreaFilled(false);
+
+
+
+        boton_borrar.setContentAreaFilled(false);
+        boton_borrar.setBorderPainted(false);
+        boton_borrar.setContentAreaFilled(false);
+
+        vuelto.setContentAreaFilled(false);
+        vuelto.setBorderPainted(false);
+        vuelto.setContentAreaFilled(false);
+
+        JTextField texto = new JTextField();
+        texto.setBounds(380,15,100,30);
+        this.add(texto);
+        ActionListener oyente1 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "1");
+            }
+        };
+        ActionListener oyente2 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "2");
+            }
+        };
+        ActionListener oyente3 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "3");
+            }
+        };
+        ActionListener oyente4 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "4");
+            }
+        };
+        ActionListener oyente5 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "5");
+            }
+        };
+        ActionListener oyente6 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText(texto.getText() + "6");
+            }
+        };
+        ActionListener oyente7 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int serie;
+                serie = Integer.parseInt(texto.getText());
+
+                texto.setText("");
+
+            }
+        };
+        ActionListener oyente8 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                texto.setText("");
+            }
+        };
+        ActionListener oyente9 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        };
+        boton1.addActionListener(oyente1);
+        boton2.addActionListener(oyente2);
+        boton3.addActionListener(oyente3);
+        boton4.addActionListener(oyente4);
+        boton5.addActionListener(oyente5);
+        boton6.addActionListener(oyente6);
+        circulo.addActionListener(oyente7);
+        boton_borrar.addActionListener(oyente8);
 
     }
 
