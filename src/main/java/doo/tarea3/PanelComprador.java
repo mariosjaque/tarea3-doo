@@ -14,6 +14,8 @@ public class PanelComprador extends JPanel{
     private Comprador comprador;
     private Expendedor expendedor;
 
+    private JLabel productoImg = new JLabel();
+
     public PanelComprador(Expendedor exp){
         super();
         expendedor = exp;
@@ -167,9 +169,16 @@ public class PanelComprador extends JPanel{
 
                 int prod;
                 prod = Integer.parseInt(texto.getText());
+                productos producto = productos.values()[prod-1];
                 try {
                     comprador = new Comprador(moneda,prod,expendedor);
+                    productoImg.setIcon(new ImageIcon(producto.imagenProducto().getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
+                    productoImg.setBounds(410,550, 50, 50);
+                    add(productoImg);
+                    repaint();
                 } catch (NoHayProductoException | PagoInsuficienteExcepcion | PagoIncorrectoException ex) {
+                    remove(productoImg);
+                    repaint();
                     JOptionPane.showMessageDialog(null, ex);
                 }
                 texto.setText("");
@@ -185,6 +194,9 @@ public class PanelComprador extends JPanel{
         ActionListener oyente9 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(productoImg!=null){
+                    remove(productoImg);
+                }
                 Producto queCompre = expendedor.getProducto();
                 if(queCompre==null){
                     JOptionPane.showMessageDialog(null,"No hay nada");
