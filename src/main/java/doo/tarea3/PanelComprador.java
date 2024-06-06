@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
 public class PanelComprador extends JPanel{
@@ -212,6 +213,13 @@ public class PanelComprador extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 moneda = new Billete1000();
+            }
+        };
+
+        ActionListener oyente13 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         };
         boton1.addActionListener(oyente1);

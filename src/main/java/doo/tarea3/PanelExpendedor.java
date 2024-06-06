@@ -13,7 +13,7 @@ import doo.tarea1.*;
 public class PanelExpendedor extends JPanel {
 
 
-    public PanelExpendedor() throws NoHayProductoException {
+    public PanelExpendedor(Expendedor expendedor2) throws NoHayProductoException {
         super();
 
 

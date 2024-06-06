@@ -35,4 +35,7 @@ public class Deposito<T> {
             return al.remove(0);
         }
     }
+    public int tamañoDeposito(){
+        return al.size();
+    }
 }

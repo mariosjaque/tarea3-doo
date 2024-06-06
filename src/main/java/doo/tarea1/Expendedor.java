@@ -147,4 +147,27 @@ public class Expendedor extends Exception {
         return m;
     }
 
+    public int cantidadProductos(int n){
+        productos producto = productos.values()[n - 1];
+        int numero = 0;
+        switch (producto) {
+            case COCA:
+                numero = coca.tamañoDeposito();
+                break;
+            case SPRITE:
+                numero = sprite.tamañoDeposito();
+                break;
+            case FANTA:
+                numero = fanta.tamañoDeposito();
+                break;
+            case SNICKERS:
+                numero = snickers.tamañoDeposito();
+                break;
+            case SUPER8:
+                numero = super8.tamañoDeposito();
+                break;
+        }
+        return numero;
+    }
+
 }
