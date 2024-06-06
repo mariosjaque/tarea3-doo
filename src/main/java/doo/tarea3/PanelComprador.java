@@ -14,6 +14,7 @@ public class PanelComprador extends JPanel{
     private Comprador comprador;
     private Expendedor expendedor;
 
+
     public PanelComprador(Expendedor exp){
         super();
         expendedor = exp;
@@ -190,7 +191,7 @@ public class PanelComprador extends JPanel{
                     JOptionPane.showMessageDialog(null,"No hay nada");
                 }
                 else{
-                    JOptionPane.showMessageDialog(null,"Usted ha comprado "+queCompre.Sonido());
+                    JOptionPane.showMessageDialog(null,"Su vuelto es de "+comprador.cuantoVuelto()+" y "+"Usted ha comprado "+queCompre.Sonido());
                 }
 
 
