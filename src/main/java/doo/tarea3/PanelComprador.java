@@ -7,14 +7,20 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
+/**
+ * La clase PanelComprador extiende JPanel y representa el panel del comprador en la interfaz gráfica.
+ * Contiene un objeto Moneda, un objeto Comprador y un objeto Expendedor.
+ */
 
 public class PanelComprador extends JPanel{
     private Moneda moneda = null;
     private Comprador comprador;
     private Expendedor expendedor;
 
-
+    /**
+     * Constructor de la clase PanelComprador.
+     * Inicializa el comprador y la máquina expendedora, y configura la interfaz gráfica.
+     */
     public PanelComprador(Expendedor exp){
         super();
         expendedor = exp;
@@ -35,7 +41,10 @@ public class PanelComprador extends JPanel{
 
         JLabel Alerta;
 
-        //Creacion teclado
+        /**
+         * Creacion de teclado, botones y oyentes.
+         */
+
 
         ImageIcon flecha = new ImageIcon(getClass().getResource("/flechareversa.png"));
         ImageIcon Imoneda100 = new ImageIcon(getClass().getResource("/moneda100.png"));
@@ -126,6 +135,9 @@ public class PanelComprador extends JPanel{
         JTextField texto = new JTextField();
         texto.setBounds(380,15,100,30);
         this.add(texto);
+        /**
+         * Configura los listeners para cada oyente y le asigna un evento.
+         */
         ActionListener oyente1 = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

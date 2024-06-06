@@ -7,12 +7,19 @@ import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
 import java.util.ArrayList;
-
+/**
+ * La clase PanelExpendedor extiende JPanel y representa una máquina expendedora en la interfaz gráfica.
+ * Esta clase maneja la excepción NoHayProductoException que se lanza cuando no hay suficientes productos en la máquina.
+ */
 import doo.tarea1.*;
 public class PanelExpendedor extends JPanel {
 
     private Expendedor exp;
     private ArrayList<JLabel> vistaProductos = new ArrayList<JLabel>();
+    /**
+     * Constructor de la clase PanelExpendedor.
+     * Inicializa la máquina expendedora y configura la interfaz gráfica.
+     */
     public PanelExpendedor(Expendedor expendedor2) throws NoHayProductoException {
         super();
         exp = expendedor2;
@@ -37,7 +44,10 @@ public class PanelExpendedor extends JPanel {
         this.add(flecha2);
         this.add(expendedor);
     }
-
+    /**
+     * Método para visualizar los depósitos de productos en la interfaz gráfica.
+     * Crea una etiqueta para cada producto en la máquina expendedora y la añade a la interfaz.
+     */
     public void vistaDepositos(){
         for(int i=0;i<5;i++){
             productos producto = productos.values()[i];
@@ -51,14 +61,20 @@ public class PanelExpendedor extends JPanel {
             }
         }
     }
-
+    /**
+     * Método para resetear la vista de los depósitos de productos.
+     * Elimina todas las etiquetas de productos de la interfaz y limpia la lista de etiquetas.
+     */
     public void resetVistaDepositos() {
         for (JLabel producto : vistaProductos) {
             remove(producto);
         }
         vistaProductos.clear();
     }
-
+    /**
+     * Método para pintar componentes en la interfaz gráfica.
+     * Este método se llama automáticamente cuando se necesita redibujar la interfaz.
+     */
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.black);
