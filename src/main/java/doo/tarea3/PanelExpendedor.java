@@ -15,13 +15,16 @@ import doo.tarea1.*;
 public class PanelExpendedor extends JPanel {
 
     private Expendedor exp;
-    private ArrayList<JLabel> vistaProductos = new ArrayList<JLabel>();
+    private ArrayList<ArrayList<JLabel>> vistaProductos = new ArrayList<>();
     /**
      * Constructor de la clase PanelExpendedor.
      * Inicializa la máquina expendedora y configura la interfaz gráfica.
      */
     public PanelExpendedor(Expendedor expendedor2) throws NoHayProductoException {
         super();
+        for(int i=0;i<5;i++){
+            vistaProductos.add(i, new ArrayList<JLabel>());
+        }
         exp = expendedor2;
         this.setLayout(null);
         this.setBounds(300,0,400,699);
@@ -56,8 +59,8 @@ public class PanelExpendedor extends JPanel {
                 JLabel productoImg = new JLabel();
                 productoImg.setIcon(new ImageIcon(producto.imagenProducto().getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
                 productoImg.setBounds(90+(30*j), 210+(50*i), 50, 50);
-                vistaProductos.add(productoImg);
-                add(productoImg);
+                vistaProductos.get(i).add(productoImg);
+                this.add(productoImg);
             }
         }
     }
@@ -65,11 +68,10 @@ public class PanelExpendedor extends JPanel {
      * Método para resetear la vista de los depósitos de productos.
      * Elimina todas las etiquetas de productos de la interfaz y limpia la lista de etiquetas.
      */
-    public void resetVistaDepositos() {
-        for (JLabel producto : vistaProductos) {
-            remove(producto);
-        }
-        vistaProductos.clear();
+    public void resetVistaDepositos(int num) {
+        int ultimoProd = vistaProductos.get(num-1).size()-1;
+        remove(vistaProductos.get(num-1).get(ultimoProd));
+        vistaProductos.get(num-1).remove(ultimoProd);
     }
     /**
      * Método para pintar componentes en la interfaz gráfica.

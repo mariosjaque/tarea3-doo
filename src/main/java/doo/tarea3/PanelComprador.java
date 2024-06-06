@@ -16,15 +16,16 @@ public class PanelComprador extends JPanel{
     private Moneda moneda = null;
     private Comprador comprador;
     private Expendedor expendedor;
-
+    private PanelExpendedor panelexp;
     private JLabel productoImg = new JLabel();
 
     /**
      * Constructor de la clase PanelComprador.
      * Inicializa el comprador y la máquina expendedora, y configura la interfaz gráfica.
      */
-    public PanelComprador(Expendedor exp){
+    public PanelComprador(Expendedor exp, PanelExpendedor panel){
         super();
+        panelexp= panel;
         expendedor = exp;
         this.setLayout(null);
         this.setBounds(0,0,700,700);
@@ -189,6 +190,8 @@ public class PanelComprador extends JPanel{
                     productoImg.setBounds(410,550, 50, 50);
                     add(productoImg);
                     repaint();
+                    panelexp.resetVistaDepositos(prod);
+                    panelexp.repaint();
                 } catch (NoHayProductoException | PagoInsuficienteExcepcion | PagoIncorrectoException ex) {
                     remove(productoImg);
                     repaint();
