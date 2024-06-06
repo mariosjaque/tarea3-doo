@@ -1,14 +1,12 @@
 package doo.tarea3;
 
-import doo.tarea1.NoHayProductoException;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import doo.tarea1.Expendedor;
+import doo.tarea1.*;
 
 public class PanelPrincipal extends JPanel {
 

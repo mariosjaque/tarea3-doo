@@ -47,7 +47,7 @@ public class PanelComprador extends JPanel{
         borrar.setIcon(new ImageIcon(flecha.getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH)));
         Jmoneda100.setIcon(new ImageIcon(Imoneda100.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH)));
         Jmoneda500.setIcon(new ImageIcon(Imoneda500.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH)));
-        Jmoneda1000.setIcon(new ImageIcon(Imoneda1000.getImage().getScaledInstance(200,100,Image.SCALE_SMOOTH)));
+        Jmoneda1000.setIcon(new ImageIcon(Imoneda1000.getImage().getScaledInstance(100,100,Image.SCALE_SMOOTH)));
 
         JButton boton1 = new JButton();
         JButton boton2 = new JButton();
@@ -77,7 +77,7 @@ public class PanelComprador extends JPanel{
         borrar.setBounds(580,140,50,50);
         Jmoneda100.setBounds(0,0,100,100);
         Jmoneda500.setBounds(0,200,100,100);
-        Jmoneda1000.setBounds(0,400,200,100);
+        Jmoneda1000.setBounds(0,400,100,100);
 
 
         this.add(boton1);
@@ -174,7 +174,6 @@ public class PanelComprador extends JPanel{
                 }
                 texto.setText("");
                 moneda = null;
-
             }
         };
         ActionListener oyente8 = new ActionListener() {
