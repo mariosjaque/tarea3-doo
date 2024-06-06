@@ -7,11 +7,18 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import doo.tarea1.*;
-
+/**
+ * La clase PanelPrincipal extiende JPanel y representa el panel principal de la interfaz gráfica.
+ * Contiene un PanelExpendedor y un PanelComprador.
+ */
 public class PanelPrincipal extends JPanel {
 
     private PanelExpendedor PanelExpendedor;
     private PanelComprador PanelComprador;
+    /**
+     * Constructor de la clase PanelPrincipal.
+     * Inicializa los paneles de la máquina expendedora y del comprador, y configura la interfaz gráfica.
+     */
     public PanelPrincipal() throws NoHayProductoException {
         super();
         this.setLayout(null);
@@ -29,7 +36,10 @@ public class PanelPrincipal extends JPanel {
         this.setBounds(0,0,690,690);
     }
 
-
+    /**
+     * Método para pintar componentes en la interfaz gráfica.
+     * Este método se llama automáticamente cuando se necesita rehacer la interfaz.
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
