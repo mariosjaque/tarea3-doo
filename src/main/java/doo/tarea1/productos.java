@@ -9,8 +9,8 @@ import java.awt.*;
  */
 public enum productos {
     COCA(1000,new ImageIcon(productos.class.getResource("/CocaCola.png"))),
-    SPRITE(1200,new ImageIcon(productos.class.getResource("/Sprite.png"))),
-    FANTA(1200,new ImageIcon(productos.class.getResource("/Fanta.png"))),
+    SPRITE(800,new ImageIcon(productos.class.getResource("/Sprite.png"))),
+    FANTA(900,new ImageIcon(productos.class.getResource("/Fanta.png"))),
     SNICKERS(500,new ImageIcon(productos.class.getResource("/Snickers.png"))),
     SUPER8(100,new ImageIcon(productos.class.getResource("/super8.png")));
 
