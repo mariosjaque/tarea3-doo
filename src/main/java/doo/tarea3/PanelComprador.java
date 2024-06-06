@@ -22,8 +22,8 @@ public class PanelComprador extends JPanel{
         JButton moneda500 = new JButton();
         JButton moneda100 = new JButton();
         JButton billete1000 = new JButton();
-        moneda500.setBounds(0,0,100,100);
-        moneda100.setBounds(0,200,100,100);
+        moneda100.setBounds(0,0,100,100);
+        moneda500.setBounds(0,200,100,100);
         billete1000.setBounds(0,400,200,100);
 
 

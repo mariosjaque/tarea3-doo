@@ -148,7 +148,7 @@ public class Expendedor extends Exception {
     }
 
     public int cantidadProductos(int n){
-        productos producto = productos.values()[n - 1];
+        productos producto = productos.values()[n];
         int numero = 0;
         switch (producto) {
             case COCA:
