@@ -1,5 +1,7 @@
 package doo.tarea1;
 
+import java.awt.*;
+
 /**
  * Crea un expendedor y define el comportamiento logico de este, incluyendo las excepciones
  */
@@ -12,6 +14,7 @@ public class Expendedor extends Exception {
     private Deposito<Moneda> recaudacion;
     private Deposito<Moneda> monVu;
     private Producto depositoSalida;
+    private Moneda moneda;
 
     /**
      * Verifica el stock de cada producto
@@ -63,7 +66,7 @@ public class Expendedor extends Exception {
      * @throws PagoInsuficienteExcepcion una excepcion que permite saber cuando el dinero ingresado es menos al precio del producto
      * @throws PagoIncorrectoException cuando no se pudo concretar la transaccion.
      */
-    void comprarProducto(Moneda m, int prodnum) throws PagoInsuficienteExcepcion,NoHayProductoException,PagoIncorrectoException {
+    public void comprarProducto(Moneda m, int prodnum) throws PagoInsuficienteExcepcion,NoHayProductoException,PagoIncorrectoException {
         if(m==null){throw new PagoIncorrectoException("Moneda invalida");}
         int pB=0;
         productos producto = null;
@@ -130,6 +133,41 @@ public class Expendedor extends Exception {
     }
 
     public Producto getProducto(){
-        return depositoSalida;
+        Producto prod = depositoSalida;
+        depositoSalida = null;
+        return prod;
     }
+
+    public Moneda setMoneda(Moneda m){
+        return moneda = m;
+    }
+    public Moneda getMoneda() {
+        Moneda m = moneda;
+        moneda = null;
+        return m;
+    }
+
+    public int cantidadProductos(int n){
+        productos producto = productos.values()[n];
+        int numero = 0;
+        switch (producto) {
+            case COCA:
+                numero = coca.tamañoDeposito();
+                break;
+            case SPRITE:
+                numero = sprite.tamañoDeposito();
+                break;
+            case FANTA:
+                numero = fanta.tamañoDeposito();
+                break;
+            case SNICKERS:
+                numero = snickers.tamañoDeposito();
+                break;
+            case SUPER8:
+                numero = super8.tamañoDeposito();
+                break;
+        }
+        return numero;
+    }
+
 }
