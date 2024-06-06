@@ -1,19 +1,24 @@
 package doo.tarea1;
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Utillizando un enum se representa todos los productos ofrecidos
  * y su valor de tipo int para calculos de vuelto
  */
 public enum productos {
-    COCA(1000),
-    SPRITE(1200),
-    FANTA(1200),
-    SNICKERS(500),
-    SUPER8(300);
+    COCA(1000,new ImageIcon(productos.class.getResource("/CocaCola.png"))),
+    SPRITE(1200,new ImageIcon(productos.class.getResource("/Sprite.png"))),
+    FANTA(1200,new ImageIcon(productos.class.getResource("/Fanta.png"))),
+    SNICKERS(500,new ImageIcon(productos.class.getResource("/Snickers.png"))),
+    SUPER8(100,new ImageIcon(productos.class.getResource("/super8.png")));
 
     private int valor;
-    private productos (int valor){
+    private ImageIcon imagen;
+    private productos (int valor, ImageIcon imagen){
         this.valor = valor;
+        this.imagen = imagen;
     }
 
     /**
@@ -23,4 +28,6 @@ public enum productos {
     public int valorProductos(){
         return valor;
     }
+
+    public ImageIcon imagenProducto(){ return imagen; }
 }
